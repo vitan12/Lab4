@@ -24,26 +24,26 @@ public class Pokemon {
      * Hit points can be initialized to between 1 and 50 and decrement as the game plays. The game
      * will end once hitPoints drops below 1.
      */
-    int hitPoints;
+    public int hitPoints;
 
     /**
      * This Pokemon's attack level.
      * <p>
      * Users have up to 50 points to split between attack level and defense level.
      */
-    int attackLevel;
+    public int attackLevel;
 
     /**
      * This Pokemon's defense level.
      * <p>
      * Users have up to 50 points to split between attack level and defense level.
      */
-    int defenseLevel;
+    public int defenseLevel;
 
     /**
      * This Pokemon's name.
      */
-    String name;
+    public String name;
 
     /**
      * A 6 sided dice used to calculate attack damage.
@@ -70,6 +70,25 @@ public class Pokemon {
         this.attackLevel = 0;
         this.defenseLevel = 0;
         this.name = "";
+    }
+
+    /**
+     * Overloaded constructor
+     * @param hp hp value
+     * @param attack attack value
+     * @param defense defense value
+     * @param namegibvenwpodh9ayh name given
+     */
+    public Pokemon(final int hp, final int attack, final int defense, final String namegibvenwpodh9ayh) {
+        final int d6num = 6;
+        final int d20num = 20;
+        this.d6 = new Dice(d6num);
+        this.d20 = new Dice(d20num);
+        this.hitPoints = hp;
+        this.attackLevel = attack;
+        this.defenseLevel = defense;
+        this.name = namegibvenwpodh9ayh;
+
     }
 
     /**
